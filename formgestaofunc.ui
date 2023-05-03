@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormGestaoFunc</class>
+ <widget class="QDialog" name="FormGestaoFunc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="statusbarLayout"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabFuncionarios">
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	border: 1px solid #bfbebd;
+	border-radius: 10px;
+	padding: 2px;
+}
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab1">
+      <attribute name="title">
+       <string>Gestão de funcionários</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QTableWidget" name="tabelaFuncionarios"/>
+       </item>
+       <item row="1" column="0">
+        <layout class="QGridLayout" name="funcoesLayout" columnstretch="1,3,0,2">
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="busca">
+           <property name="placeholderText">
+            <string>ID do funcionário</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="filtrarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+           </property>
+           <property name="text">
+            <string>Filtrar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="2">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Filtrar por:</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QRadioButton" name="idRadioButton">
+              <property name="text">
+               <string>ID Func.</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="nomeRadioButton">
+              <property name="text">
+               <string>Nome</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="editarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	padding: 5px;
+	background-color: #ffffff; 
+	color: #000000;
+	border: 1px solid #fdc005;
+	border-radius: 10px;
+} 
+
+:hover {
+	background-color: #fdc005;
+}</string>
+           </property>
+           <property name="text">
+            <string> Editar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/editar.png</normaloff>:/imgs/imagens/editar.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" rowspan="2">
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QPushButton" name="deletarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	padding: 5px;
+	border: 1px solid #dc3643;
+	border-radius: 10px;
+	background-color: #fff;
+	color:#dc3643;
+}
+
+:hover {
+	background-color: #dc3643;
+	color: #fff;
+}</string>
+           </property>
+           <property name="text">
+            <string> Deletar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/deletar.png</normaloff>:/imgs/imagens/deletar.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab2">
+      <attribute name="title">
+       <string>Adicionar Funcionário</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3" rowstretch="4,0,1">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Dados de usuário</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Username:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="username">
+              <property name="maxLength">
+               <number>30</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Senha:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="senha">
+              <property name="maxLength">
+               <number>30</number>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Acesso:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="acesso">
+              <item>
+               <property name="text">
+                <string>Padrão</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Admin</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="criarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 5px;
+border-radius: 10px;
+background-color: #26a844;
+color: #fff;
+}
+
+QPushButton:hover {
+background-color: #22973d;
+}</string>
+           </property>
+           <property name="text">
+            <string>Criar novo funcionário</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="limparButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+           </property>
+           <property name="text">
+            <string>Limpar campos</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Dados pessoais</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Nome completo:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="nome">
+              <property name="maxLength">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Telefone:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="telefone">
+              <property name="inputMask">
+               <string>(99) 99999-9999</string>
+              </property>
+              <property name="maxLength">
+               <number>15</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Email:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="email">
+              <property name="maxLength">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

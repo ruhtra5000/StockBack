@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>imagens/usuarioLogin.png</file>
+        <file>imagens/login.png</file>
+        <file>imagens/logout.png</file>
+        <file>imagens/estoque.png</file>
+        <file>imagens/funcionario.png</file>
+        <file>imagens/sair.png</file>
+        <file>imagens/sobre.png</file>
+        <file>imagens/vendas.png</file>
+        <file>imagens/fornecedor.png</file>
+        <file>imagens/deletar.png</file>
+        <file>imagens/editar.png</file>
+        <file>imagens/adicionar.png</file>
+        <file>imagens/buscarProduto.png</file>
+        <file>imagens/atualizar.png</file>
+        <file>imagens/fecharVenda.png</file>
+        <file>imagens/logoGrande.png</file>
+        <file>imagens/logo32.png</file>
+        <file>imagens/logo32PeB.png</file>
+        <file>imagens/qtLogo.png</file>
+        <file>imagens/logoMedio.png</file>
+    </qresource>
+</RCC>

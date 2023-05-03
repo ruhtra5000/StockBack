@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormGestaoFornecedores</class>
+ <widget class="QDialog" name="FormGestaoFornecedores">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabFornecedores">
+     <property name="styleSheet">
+      <string notr="true">QLineEdit, QDateEdit {
+	border: 1px solid #bfbebd;
+	border-radius: 10px;
+	padding: 2px;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Gestão fornecedores</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="tabelaFornecedores"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout" columnstretch="1,3,0,2">
+         <item row="0" column="0" rowspan="2">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Filtrar por:</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QRadioButton" name="idRadioButton">
+              <property name="text">
+               <string>Código</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="nomeRadioButton">
+              <property name="text">
+               <string>Nome</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="busca">
+           <property name="placeholderText">
+            <string>Código</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2" rowspan="2">
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="filtrarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+           </property>
+           <property name="text">
+            <string>Filtrar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="editarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	padding: 5px;
+	background-color: #ffffff; 
+	color: #000000;
+	border: 1px solid #fdc005;
+	border-radius: 10px;
+} 
+
+:hover {
+	background-color: #fdc005;
+}</string>
+           </property>
+           <property name="text">
+            <string> Editar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/editar.png</normaloff>:/imgs/imagens/editar.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QPushButton" name="deletarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	padding: 5px;
+	border: 1px solid #dc3643;
+	border-radius: 10px;
+	background-color: #fff;
+	color:#dc3643;
+}
+
+:hover {
+	background-color: #dc3643;
+	color: #fff;
+}</string>
+           </property>
+           <property name="text">
+            <string> Deletar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/deletar.png</normaloff>:/imgs/imagens/deletar.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Adicionar fornecedor</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="3,1">
+       <item>
+        <widget class="QGroupBox" name="dadosForn">
+         <property name="title">
+          <string>Dados do fornecedor</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Nome do fornecedor:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="nome">
+              <property name="maxLength">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>CNPJ:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="cnpj">
+              <property name="inputMask">
+               <string>99.999.999/9999-99</string>
+              </property>
+              <property name="maxLength">
+               <number>18</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Telefone:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="telefone">
+              <property name="inputMask">
+               <string>(99) 99999-9999</string>
+              </property>
+              <property name="maxLength">
+               <number>15</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>E-mail:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="email">
+              <property name="maxLength">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="criarButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+margin-top: 25px;
+margin-bottom: 10px;
+padding: 5px;
+border-radius: 10px;
+background-color: #26a844;
+color: #fff;
+}
+
+QPushButton:hover {
+background-color: #22973d;
+}</string>
+           </property>
+           <property name="text">
+            <string>Criar fornecedor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="limparButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+margin-top: 25px;
+margin-bottom: 10px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+           </property>
+           <property name="text">
+            <string>Limpar campos</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Resgistros</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QTableWidget" name="tabelaRegistros"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="funcoesLayout">
+         <item row="0" column="5">
+          <widget class="QPushButton" name="registrarAqButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+margin-top: 2px;
+margin-bottom: 2px;
+padding: 4px;
+border-radius: 10px;
+background-color: #26a844;
+color: #fff;
+}
+
+QPushButton:hover {
+background-color: #22973d;
+}</string>
+           </property>
+           <property name="text">
+            <string>Registrar aquisição</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" rowspan="2">
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QPushButton" name="deletarAqButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+padding: 4px;
+border-radius: 10px;
+background-color: #dc3643;
+color: #fff;
+}
+
+QPushButton:hover {
+background-color: #c6313c;
+}</string>
+           </property>
+           <property name="text">
+            <string>Deletar aquisição</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" rowspan="2">
+          <layout class="QGridLayout" name="filtroLayout">
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_5">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>até</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QDateEdit" name="dataFim">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QDateEdit" name="dataInicio">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QLabel" name="label_6">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Filtrar por data:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="3">
+            <widget class="QPushButton" name="filtrarAqButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+padding: 4px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+             </property>
+             <property name="text">
+              <string>Filtrar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="3">
+            <widget class="QPushButton" name="restaurarButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+padding: 4px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+             </property>
+             <property name="text">
+              <string>Restaurar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="statusbarLayout"/>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

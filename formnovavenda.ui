@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormNovaVenda</class>
+ <widget class="QDialog" name="FormNovaVenda">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit, QSpinBox{
+	border: 1px solid #bfbebd;
+	border-radius: 10px;
+	padding: 2px;
+}
+
+QSpinBox::up-button  {
+	subcontrol-origin: margin;
+	subcontrol-position: top right;
+	right: 5px;
+}
+QSpinBox::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	right: 5px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="3,1,0">
+   <item row="2" column="0" colspan="2">
+    <layout class="QVBoxLayout" name="statusbarLayout"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QTableWidget" name="tabelaVenda"/>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="funcoesLayout" stretch="1,0,2">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Código do produto:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="codProd">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>99999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Quantidade:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="quantidade">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="botoesLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <widget class="QPushButton" name="adicionarButton">
+           <property name="toolTip">
+            <string>Adicionar</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+padding: 5px;
+border-radius: 10px;
+background-color: #26a844;
+color: #fff;
+}
+
+QPushButton:hover {
+background-color: #22973d;
+}</string>
+           </property>
+           <property name="text">
+            <string> Adicionar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/adicionar.png</normaloff>:/imgs/imagens/adicionar.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pesquisarButton">
+           <property name="maximumSize">
+            <size>
+             <width>35</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Pesquisar produto</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+padding: 3px;
+border: none;
+border-radius: 8px;
+background-color: #6780c2;
+}
+
+:hover {
+background-color: #7d92cb;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Recursos.qrc">
+             <normaloff>:/imgs/imagens/buscarProduto.png</normaloff>:/imgs/imagens/buscarProduto.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editarButton">
+         <property name="toolTip">
+          <string>Editar</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+margin-top: 12px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #fdc005;
+color: #000;
+}
+
+:hover {
+background-color: #e4ad05;
+}</string>
+         </property>
+         <property name="text">
+          <string> Editar</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Recursos.qrc">
+           <normaloff>:/imgs/imagens/editar.png</normaloff>:/imgs/imagens/editar.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deletarButton">
+         <property name="toolTip">
+          <string>Deletar</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+margin-top: 12px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #dc3643;
+color: #fff;
+}
+
+:hover {
+background-color: #c6313c;
+}</string>
+         </property>
+         <property name="text">
+          <string> Deletar</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Recursos.qrc">
+           <normaloff>:/imgs/imagens/deletar.png</normaloff>:/imgs/imagens/deletar.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="finalizarButton">
+         <property name="toolTip">
+          <string>Finalizar</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+margin-top: 12px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+         </property>
+         <property name="text">
+          <string>Finalizar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="finalizarFecharButton">
+         <property name="toolTip">
+          <string>Finalizar e fechar</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+margin-top: 12px;
+padding: 5px;
+border: none;
+border-radius: 10px;
+background-color: #6d747c;
+color: #fff;
+}
+
+:hover {
+background-color: #7c8289;
+}</string>
+         </property>
+         <property name="text">
+          <string>Finalizar e fechar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QLabel" name="valorTotal">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">margin-left: 3px;</string>
+     </property>
+     <property name="text">
+      <string>Valor total: R$ 0</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

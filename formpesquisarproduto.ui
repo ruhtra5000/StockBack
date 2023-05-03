@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormPesquisarProduto</class>
+ <widget class="QDialog" name="FormPesquisarProduto">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tabelaSelecProdutos"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="selecionarButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 4px;
+	border-radius: 10px;
+	background-color: #26a844;
+	color: #fff;
+}
+
+QPushButton:hover {
+	background-color: #22973d;
+}</string>
+       </property>
+       <property name="text">
+        <string>Selecionar produto</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelarButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 3px;
+	border: 1px solid #dc3643;
+	border-radius: 10px;
+	background-color: #fff;
+	color:#dc3643;
+}
+
+:hover {
+	background-color: #dc3643;
+	color: #fff;
+}</string>
+       </property>
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

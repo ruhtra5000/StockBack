@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormPesquisarAquisicao</class>
+ <widget class="QDialog" name="FormPesquisarAquisicao">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tabelaGeral"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="selecionarButton">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 4px;
+	border-radius: 10px;
+	background-color: #6d747c;
+	color: #fff;
+}
+
+QPushButton:hover {
+	background-color: #7c8289;
+}</string>
+     </property>
+     <property name="text">
+      <string>Selecionar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
